@@ -225,7 +225,7 @@ a:hover {
     height: 300px;
     width: 400px;
     margin: 3rem 0 0 0;
-    background-image: url(./img-projeto.jpg);
+    background-image: url(./garage-img.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -233,9 +233,11 @@ a:hover {
     justify-content: center;
     align-items: center;
     filter: grayscale(0.5);
-    color: #5f0808;
+    color: #ffffff;
+    text-shadow: black 0.2em 0.2em 0.3em;
     cursor: pointer;
     transition: 0.3s;
+    z-index: 1;
 }
 
 .card-text {
@@ -260,9 +262,11 @@ a:hover {
     height: 100px;
     width: 100px;
     display: block;
-    border: 1px solid #ffffff;
+    border: none;
+    background-color: #0000002d;
     opacity: 0;
     transition: 0.3s;
+    z-index: -1;
 }
 
 .card-wrapper h2 {
@@ -282,6 +286,9 @@ a:hover {
     transition: 0.3s;
 }
 
+.card:hover {
+    filter: unset;
+}
 .card:hover > .card-wrapper::before {
     width: 350px;
     height: 250px;
@@ -289,7 +296,8 @@ a:hover {
 }
 
 .card:hover > .card-wrapper p {
-    font-size: 14px;
+    font-size: 18px;
+    letter-spacing: 2px;
     opacity: 1;
     visibility: visible;
 }
